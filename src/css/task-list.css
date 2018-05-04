@@ -1,0 +1,130 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    width: 1240px;
+    overflow-x: auto;
+    margin: auto;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top: 2px;
+    width: 70px;
+    height: 35px;
+    border-radius: 3px;
+    background: #007cbb;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #005b95;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.task-list-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.task-list {
+    margin-right: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 300px;
+    background-color: #e2e4e6;
+    border-radius: 3px;
+}
+ol, ul {
+    margin-bottom: 5px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.task {
+    background-color: #ffffff;
+    padding: 5px 90px 30px 5px;
+    margin-top: 5px ;
+    border-radius: 3px;
+    border-bottom: 2px #cdcdcd ;
+}
+
+.task:hover {
+    background-color: #edeff0;
+}
+
+.add-task {
+    display: block;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.title-task {
+    margin-bottom: 5px;
+    width: 280px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    font-size: 15px;
+}
+
+.save-task {
+    display: none;
+}
+
+.close {
+    margin-right: 5px;
+}
+
+input:focus, input:hover {
+    outline:none;
+}
+
+.add-list{
+    display: block;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    padding-right: 120px;
+    padding-left: 10px;
+    width: 300px;
+    background-color: #e2e4e6;
+    border-radius: 3px;
+}
+
+.add-list:hover{
+    background-color: #b7b9bb;
+}
+
+.title-task-list{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 280px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    font-size: 15px;
+}

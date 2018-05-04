@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Board | Java</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/task-list.css" rel="stylesheet">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<nav role="navigation" class="navbar navbar-default">
+    <div class="">
+        <a href="#" class="navbar-brand">TASK-LIST</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="board-container">
+    <div class="menu">
+        <a class="menu-item">Java</a>
+    </div>
+
+    <div class="task-list-container">
+        <div class="task-list">
+            <h4>To Do</h4>
+            <ul class="list">
+                <li class="task">Spring Boot.</li>
+                <li class="task">Unit-testing.</li>
+                <li class="task">Open-source.</li>
+                <li class="task">Java SE.</li>
+            </ul>
+
+            <div id="new-task-0" class="add-task">
+                <a onclick="show('save-task-0', 'new-task-0')">Add task ...</a>
+            </div>
+
+            <div id="save-task-0" class="save-task">
+                <form method="post" modelAttribute="task">
+                    <fieldset>
+                        <div class="new-task">
+                            <input class="title-task" path="name" placeholder=" Add task title" type="text"/>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-success">Save</button>
+
+                    <button type="button" onclick="show('new-task-0', 'save-task-0')" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="task-list">
+            <h4>Doing</h4>
+            <ul class="list">
+                <li class="task">HashCode and Equals</li>
+                <li class="task">Collections.</li>
+                <li class="task">Interview question.</li>
+                <li class="task">Datasource</li>
+                <li class="task">JavaScript.</li>
+            </ul>
+
+            <div id="new-task-1" class="add-task">
+                <a onclick="show('save-task-1', 'new-task-1')">Add task ...</a>
+            </div>
+
+            <div id="save-task-1" class="save-task">
+                <form method="post" modelAttribute="task">
+                    <fieldset>
+                        <div class="new-task">
+                            <input class="title-task" path="name" placeholder=" Add task title" type="text"/>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="button" onclick="show('new-task-1', 'save-task-1')" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="task-list">
+            <h4>Done</h4>
+            <ul class="list">
+                <li class="task">Mutable objects.</li>
+                <li class="task">Git.</li>
+                <li class="task">Exception</li>
+            </ul>
+
+            <div id="new-task-2" class="add-task">
+                <a onclick="show('save-task-2', 'new-task-2')">Add task ...</a>
+            </div>
+
+            <div id="save-task-2" class="save-task">
+                <form method="post" modelAttribute="task">
+                    <fieldset>
+                        <div class="new-task">
+                            <input class="title-task" path="name" placeholder=" Add task title" type="text"/>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="button" onclick="show('new-task-2', 'save-task-2')" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="new-list" class="add-list" onclick="show('save-list', 'new-list')"><h4>Add a list... </h4></div>
+
+        <div id="save-list" class="task-list" style="display: none;">
+            <form method="post" modelAttribute="task">
+                <fieldset>
+                    <input class="title-task-list" path="name" placeholder=" Add task-list title" type="text"/>
+                </fieldset>
+                <button type="submit" class="btn btn-success">Save</button>
+                <button type="button" class="close" aria-label="Close" >
+                    <span aria-hidden="true" onclick="show('new-list', 'save-list')">&times;</span>
+                </button>
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
