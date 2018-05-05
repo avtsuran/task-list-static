@@ -22,29 +22,34 @@
 </nav>
 
 <div class="board-container">
-    <div class="board" href="/board?id=0" onmouseover="invokeDeleteButton('delete-0')" onmouseout="invokeDeleteButton('delete-0')">
+    <div id="0" class="board" href="/board?id=0" onmouseover="showOrHideElement('delete-0')"
+         onmouseout="showOrHideElement('delete-0')">
         <p>Java</p>
-        <span id="delete-0" class="delete" aria-hidden="true">&times;</span>
+        <span id="delete-0" class="delete" aria-hidden="true" onclick="deleteBoard('0')">&times;</span>
     </div>
 
-    <div class="board" href="/board?id=1" onmouseover="invokeDeleteButton('delete-1')" onmouseout="invokeDeleteButton('delete-1')">
+    <div id="1" class="board" href="/board?id=1" onmouseover="showOrHideElement('delete-1')"
+         onmouseout="showOrHideElement('delete-1')">
         <p>HTTP</p>
-        <span id="delete-1" class="delete" aria-hidden="true">&times;</span>
+        <span id="delete-1" class="delete" aria-hidden="true" onclick="deleteBoard('1')">&times;</span>
     </div>
 
-    <div class="board" href="/board?id=2" onmouseover="invokeDeleteButton('delete-2')" onmouseout="invokeDeleteButton('delete-2')">
+    <div id="2" class="board" href="/board?id=2" onmouseover="showOrHideElement('delete-2')"
+         onmouseout="showOrHideElement('delete-2')">
         <p>Hibernate</p>
-        <span id="delete-2" class="delete" aria-hidden="true">&times;</span>
+        <span id="delete-2" class="delete" aria-hidden="true" onclick="deleteBoard('2')">&times;</span>
     </div>
 
-    <div class="board" href="/board?id=3" onmouseover="invokeDeleteButton('delete-3')" onmouseout="invokeDeleteButton('delete-3')">
+    <div id="3" class="board" href="/board?id=3" onmouseover="showOrHideElement('delete-3')"
+         onmouseout="showOrHideElement('delete-3')">
         <p>SQL</p>
-        <span id="delete-3" class="delete" aria-hidden="true">&times;</span>
+        <span id="delete-3" class="delete" aria-hidden="true" onclick="deleteBoard('3')">&times;</span>
     </div>
 
-    <div class="board" href="/board?id=4" onmouseover="invokeDeleteButton('delete-4')" onmouseout="invokeDeleteButton('delete-4')">
+    <div id="4" class="board" href="/board?id=4" onmouseover="showOrHideElement('delete-4')"
+         onmouseout="showOrHideElement('delete-4')">
         <p>JPA</p>
-        <span id="delete-4" class="delete" aria-hidden="true">&times;</span>
+        <span id="delete-4" class="delete" aria-hidden="true" onclick="deleteBoard('4')">&times;</span>
     </div>
 
     <div class="save-board" id="save-board">
@@ -54,12 +59,23 @@
             </fieldset>
             <button type="submit" class="btn btn-success" id="button-save">Save</button>
             <button type="button" class="close" aria-label="Close">
-                <span aria-hidden="true" onclick="show('add-board', 'save-board')">&times;</span>
+                <span aria-hidden="true" onclick="changeDisplayForTwoElements('add-board', 'save-board')">&times;</span>
             </button>
         </form>
     </div>
 
-    <div class="create-board" id="add-board" onclick="show('save-board', 'add-board')">Create new board</div>
+    <div id="modal" class="modal-window">
+        <div class="content">
+            <div class="content-message">
+                <h4 id="remove">Remove the board?</h4>
+                <p>Once you remove a board, there is no going back. Please be certain.</p>
+            </div>
+            <a type="button" id="delete-board-by-id" class="btn btn-danger">Remove</a>
+            <a type="button" class="btn btn-default" onclick="showOrHideElement('modal')">No, thanks.</a>
+        </div>
+    </div>
+
+    <div class="create-board" id="add-board" onclick="changeDisplayForTwoElements('save-board', 'add-board')">Create new board</div>
 
 </div>
 </body>
