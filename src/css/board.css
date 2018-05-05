@@ -29,6 +29,10 @@ html, body{
 
 .delete{
     display: none;
+    padding: 0;
+    height: 10px;
+    background-color: rgba(0,0,0,0);
+    border: none;
 }
 
 .board:hover {
@@ -93,6 +97,9 @@ input:focus, input:hover {
     outline:none;
 }
 
+button:focus{
+    outline: none;
+}
 #button-save {
     margin-top: 5px;
     margin-left: 5px;
