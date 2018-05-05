@@ -22,16 +22,30 @@
 </nav>
 
 <div class="board-container">
+    <div class="board" href="/board?id=0" onmouseover="invokeDeleteButton('delete-0')" onmouseout="invokeDeleteButton('delete-0')">
+        <p>Java</p>
+        <span id="delete-0" class="delete" aria-hidden="true">&times;</span>
+    </div>
 
-    <div class="board" href="/board?id=4">Java</div>
+    <div class="board" href="/board?id=1" onmouseover="invokeDeleteButton('delete-1')" onmouseout="invokeDeleteButton('delete-1')">
+        <p>HTTP</p>
+        <span id="delete-1" class="delete" aria-hidden="true">&times;</span>
+    </div>
 
-    <div class="board" href="/board?id=5">HTTP</div>
+    <div class="board" href="/board?id=2" onmouseover="invokeDeleteButton('delete-2')" onmouseout="invokeDeleteButton('delete-2')">
+        <p>Hibernate</p>
+        <span id="delete-2" class="delete" aria-hidden="true">&times;</span>
+    </div>
 
-    <div class="board" href="/board?id=6">Hibernate</div>
+    <div class="board" href="/board?id=3" onmouseover="invokeDeleteButton('delete-3')" onmouseout="invokeDeleteButton('delete-3')">
+        <p>SQL</p>
+        <span id="delete-3" class="delete" aria-hidden="true">&times;</span>
+    </div>
 
-    <div class="board" href="/board?id=7">SQL</div>
-
-    <div class="board" href="/board?id=8">JPA</div>
+    <div class="board" href="/board?id=4" onmouseover="invokeDeleteButton('delete-4')" onmouseout="invokeDeleteButton('delete-4')">
+        <p>JPA</p>
+        <span id="delete-4" class="delete" aria-hidden="true">&times;</span>
+    </div>
 
     <div class="save-board" id="save-board">
         <form method="post" modelAttribute="board">

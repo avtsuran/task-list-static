@@ -12,20 +12,23 @@ html, body{
 }
 
 .board {
+    display: flex;
+    justify-content: space-between;
     width: 250px;
     height: 95px;
     margin: 10px;
     padding-top: 5px;
     padding-left: 10px;
+    padding-right: 10px;
     border-radius: 3px;
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
     background: #007cbb;
 }
+
 .delete{
     display: none;
-    margin-right: 5px;
 }
 
 .board:hover {
