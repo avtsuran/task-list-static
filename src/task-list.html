@@ -20,10 +20,21 @@
 </nav>
 
 <div class="board-container">
-    <div class="menu">
-        <a class="menu-item">Java</a>
+    <div class="head">
+        <div id="menu">
+            <div class="main-menu">
+                <div class="board-name">Java</div>
+                <a type="button" class="btn btn-default" onclick="changeDisplayForTwoElements('edit', 'menu')">Edit</a>
+            </div>
+        </div>
+        <div id="edit">
+            <form class="form-edit" method="post" modelAttribute="task">
+                <input class="edit-input" path="name" placeholder="Edit board " type="text"/>
+                <button type="submit" class="btn btn-success" style="margin-right: 11px">Save</button>
+                <a type="button" class="btn btn-default" onclick="changeDisplayForTwoElements('menu', 'edit')">X</a>
+            </form>
+        </div>
     </div>
-
     <div class="task-list-container">
         <div class="task-list">
             <h4>To Do</h4>
@@ -35,18 +46,17 @@
             </ul>
 
             <div id="new-task-0" class="add-task">
-                <a onclick="show('save-task-0', 'new-task-0')">Add task ...</a>
+                <a onclick="changeDisplayForTwoElements('save-task-0', 'new-task-0')">Add task ...</a>
             </div>
 
             <div id="save-task-0" class="save-task">
                 <form method="post" modelAttribute="task">
                     <fieldset>
-                        <div class="new-task">
-                            <input class="title-task" path="name" placeholder=" Add task title" type="text"/>
-                        </div>
+                        <input class="title-task" path="name" placeholder="Add task title" type="text"/>
                     </fieldset>
                     <button type="submit" class="btn btn-success">Save</button>
-                    <button type="button" onclick="show('new-task-0', 'save-task-0')" class="close" aria-label="Close">
+                    <button type="button" onclick="changeDisplayForTwoElements('new-task-0', 'save-task-0')"
+                            class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </form>
@@ -64,18 +74,19 @@
             </ul>
 
             <div id="new-task-1" class="add-task">
-                <a onclick="show('save-task-1', 'new-task-1')">Add task ...</a>
+                <a onclick="changeDisplayForTwoElements('save-task-1', 'new-task-1')">Add task ...</a>
             </div>
 
             <div id="save-task-1" class="save-task">
                 <form method="post" modelAttribute="task">
                     <fieldset>
                         <div class="new-task">
-                            <input class="title-task" path="name" placeholder=" Add task title" type="text"/>
+                            <input class="title-task" path="name" placeholder="Add task title" type="text"/>
                         </div>
                     </fieldset>
                     <button type="submit" class="btn btn-success">Save</button>
-                    <button type="button" onclick="show('new-task-1', 'save-task-1')" class="close" aria-label="Close">
+                    <button type="button" onclick="changeDisplayForTwoElements('new-task-1', 'save-task-1')"
+                            class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </form>
@@ -91,34 +102,38 @@
             </ul>
 
             <div id="new-task-2" class="add-task">
-                <a onclick="show('save-task-2', 'new-task-2')">Add task ...</a>
+                <a onclick="changeDisplayForTwoElements('save-task-2', 'new-task-2')">Add task ...</a>
             </div>
 
             <div id="save-task-2" class="save-task">
                 <form method="post" modelAttribute="task">
                     <fieldset>
                         <div class="new-task">
-                            <input class="title-task" path="name" placeholder=" Add task title" type="text"/>
+                            <input class="title-task" path="name" placeholder="Add task title" type="text"/>
                         </div>
                     </fieldset>
                     <button type="submit" class="btn btn-success">Save</button>
-                    <button type="button" onclick="show('new-task-2', 'save-task-2')" class="close" aria-label="Close">
+                    <button type="button" onclick="changeDisplayForTwoElements('new-task-2', 'save-task-2')"
+                            class="close" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </form>
             </div>
         </div>
 
-        <div id="new-list" class="add-list" onclick="show('save-list', 'new-list')"><h4>Add a list... </h4></div>
+        <div id="new-list" class="add-list" onclick="changeDisplayForTwoElements('save-list', 'new-list')">
+            <h4>Add a list... </h4>
+        </div>
 
         <div id="save-list" class="task-list" style="display: none;">
             <form method="post" modelAttribute="task">
                 <fieldset>
-                    <input class="title-task-list" path="name" placeholder=" Add task-list title" type="text"/>
+                    <input class="title-task-list" path="name" placeholder="Add task-list title" type="text"/>
                 </fieldset>
                 <button type="submit" class="btn btn-success">Save</button>
-                <button type="button" class="close" aria-label="Close" >
-                    <span aria-hidden="true" onclick="show('new-list', 'save-list')">&times;</span>
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true"
+                          onclick="changeDisplayForTwoElements('new-list', 'save-list')">&times;</span>
                 </button>
             </form>
         </div>

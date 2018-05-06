@@ -8,37 +8,46 @@ html, body{
     display: flex;
     flex-direction: column;
     width: 1240px;
-    overflow-x: auto;
     margin: auto;
 }
 
-.menu {
+.head{
     display: flex;
-    flex-wrap: wrap;
-}
-
-.menu-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 10px;
     margin-bottom: 10px;
-    padding-top: 2px;
-    width: 70px;
-    height: 35px;
-    border-radius: 3px;
-    background: #007cbb;
-    text-align: center;
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
 }
 
-.menu-item:hover {
-    background-color: #005b95;
-    text-decoration: none;
-    color: #ffffff;
+.main-menu{
+    display: flex;
+}
+
+.board-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    width: 50px;
+    margin-right: 10px;
+    background-color: #007cbb;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+}
+
+#edit{
+    display: none;
+}
+.form-edit{
+    display: flex;
+}
+
+.edit-input{
+    width: 231px;
+    margin-right: 10px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #e2e4e6;
+    font-size: 18px;
 }
 
 .task-list-container {
@@ -84,6 +93,7 @@ ol, ul {
 
 .title-task {
     margin-bottom: 5px;
+    padding-left: 5px;
     width: 280px;
     height: 30px;
     border-radius: 3px;
@@ -122,6 +132,7 @@ input:focus, input:hover {
     display: block;
     margin-top: 10px;
     margin-bottom: 5px;
+    padding-left: 5px;
     width: 280px;
     height: 30px;
     border-radius: 3px;
