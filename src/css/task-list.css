@@ -36,6 +36,7 @@ html, body{
 #edit{
     display: none;
 }
+
 .form-edit{
     display: flex;
 }
@@ -53,14 +54,31 @@ html, body{
 .task-list-container {
     display: flex;
     align-items: flex-start;
+    overflow-x: auto;
+    height: 500px;
+}
+
+.task-list-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.task-list-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e2e4e6;
+}
+
+.task-list-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #b4b5b7;
 }
 
 .task-list {
     margin-right: 10px;
+    margin-bottom: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
     padding-left: 10px;
-    width: 300px;
+    min-width: 300px;
     background-color: #e2e4e6;
     border-radius: 3px;
 }
@@ -119,7 +137,7 @@ input:focus, input:hover {
     padding-bottom: 10px;
     padding-right: 120px;
     padding-left: 10px;
-    width: 300px;
+    min-width: 300px;
     background-color: #e2e4e6;
     border-radius: 3px;
 }
