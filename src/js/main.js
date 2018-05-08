@@ -1,3 +1,5 @@
+var idList;
+
 function changeDisplayForTwoElements(show, hide){
     document.getElementById(show).style.display = "block";
     document.getElementById(hide).style.display = "none";
@@ -25,4 +27,12 @@ function taskListHead(show, hide, form, name){
 function deleteTaskList(id) {
     document.getElementById("modal").style.display = "block";
     document.getElementById("delete-list-by-id").href = "/delete-task-list?id=" + id;
+    idList = id;
+}
+
+function hideModal() {
+    document.getElementById("modal").style.display = "none";
+    document.getElementById("menu-list-" + idList).style.display = "none";
+    document.getElementById("open-menu-list-" + idList).style.display = "block";
+
 }

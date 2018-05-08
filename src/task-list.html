@@ -120,7 +120,7 @@
                         <a class="btn btn-info btn-sm" onclick="changeDisplayForTwoElements('form-edit-1', 'name-1')">
                             <span class="glyphicon glyphicon-pencil"></span>
                         </a>
-                        <a href="#" class="btn btn-danger btn-sm">
+                        <a href="#" class="btn btn-danger btn-sm" onclick="deleteTaskList('1')">
                             <span class="glyphicon glyphicon-trash"></span>
                         </a>
                         <button type="button" class="close"
@@ -183,7 +183,7 @@
                         <a class="btn btn-info btn-sm" onclick="changeDisplayForTwoElements('form-edit-2', 'name-2')">
                             <span class="glyphicon glyphicon-pencil"></span>
                         </a>
-                        <a href="#" class="btn btn-danger btn-sm">
+                        <a href="#" class="btn btn-danger btn-sm" onclick="deleteTaskList('1')">
                             <span class="glyphicon glyphicon-trash"></span>
                         </a>
                         <button type="button" class="close"
@@ -249,7 +249,7 @@
                 <p>Once you remove a task-list, there is no going back. Please be certain.</p>
             </div>
             <a type="button" id="delete-list-by-id" class="btn btn-danger">Remove</a>
-            <a type="button" class="btn btn-default" onclick="showOrHideElement('modal')">No, thanks.</a>
+            <a type="button" class="btn btn-default" onclick="hideModal()">No, thanks.</a>
         </div>
     </div>
 
