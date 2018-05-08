@@ -21,3 +21,8 @@ function taskListHead(show, hide, form, name){
     document.getElementById(form).style.display = "none";
     document.getElementById(name).style.display = "block";
 }
+
+function deleteTaskList(id) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("delete-list-by-id").href = "/delete-task-list?id=" + id;
+}

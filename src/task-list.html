@@ -36,7 +36,7 @@
         </div>
     </div>
     <section class="task-list-container">
-        <div class="task-list">
+        <div id="0" class="task-list">
             <div class="task-list-head">
                 <div id="name-0">
                     <h4>To Do</h4>
@@ -56,7 +56,7 @@
                         <a class="btn btn-info btn-sm" onclick="changeDisplayForTwoElements('form-edit-0', 'name-0')">
                             <span class="glyphicon glyphicon-pencil"></span>
                         </a>
-                        <a href="#" class="btn btn-danger btn-sm">
+                        <a href="#" class="btn btn-danger btn-sm" onclick="deleteTaskList('0')">
                             <span class="glyphicon glyphicon-trash"></span>
                         </a>
                         <button type="button" class="close"
@@ -239,8 +239,19 @@
                 </button>
             </form>
         </div>
-
     </section>
+
+    <div id="modal" class="modal-window">
+        <div class="content">
+            <div class="content-message">
+                <h4 id="remove">Remove the task-list?</h4>
+                <p>Once you remove a task-list, there is no going back. Please be certain.</p>
+            </div>
+            <a type="button" id="delete-list-by-id" class="btn btn-danger">Remove</a>
+            <a type="button" class="btn btn-default" onclick="showOrHideElement('modal')">No, thanks.</a>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
