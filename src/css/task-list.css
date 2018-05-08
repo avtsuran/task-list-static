@@ -73,6 +73,8 @@ html, body{
 }
 
 .task-list {
+    display: flex;
+    flex-direction: column;
     margin-right: 10px;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -83,14 +85,25 @@ html, body{
     border-radius: 3px;
 }
 
+.task-list-head{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list-menu{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
 .list {
     padding: 0px;
     display: flex;
     flex-direction: column;
-    max-height: 350px;
+    max-height: 360px;
     overflow-y: auto;
 }
-
 
 .list::-webkit-scrollbar {
     width: 5px;
@@ -104,7 +117,7 @@ html, body{
 .task {
     background-color: #ffffff;
     padding: 5px 90px 30px 5px;
-    margin-top: 5px;
+    margin-bottom: 5px;
     margin-right: 5px;
     border-radius: 3px;
     border-bottom: 2px #cdcdcd ;
@@ -126,6 +139,17 @@ html, body{
     margin-bottom: 5px;
     padding-left: 5px;
     width: 280px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    font-size: 15px;
+}
+
+.edit-title{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    width: 120px;
     height: 30px;
     border-radius: 3px;
     border: none;
@@ -169,4 +193,12 @@ input:focus, input:hover {
     border-radius: 3px;
     border: none;
     font-size: 15px;
+}
+
+button:focus{
+    outline: none;
+}
+
+.hide-block{
+    display: none;
 }

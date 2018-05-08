@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Board | Java</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/task-list.css" rel="stylesheet">
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -37,7 +37,40 @@
     </div>
     <section class="task-list-container">
         <div class="task-list">
-            <h4>To Do</h4>
+            <div class="task-list-head">
+                <div id="name-0">
+                    <h4>To Do</h4>
+                </div>
+                <div id="form-edit-0" class="hide-block">
+                    <form class="form-edit" method="post" modelAttribute="task">
+                        <fieldset>
+                            <input class="edit-title" path="name" placeholder="Edit task-list" type="text"/>
+                        </fieldset>
+                        <button type="submit" class="btn btn-success btn-sm" style="margin: 5px;">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="task-list-menu">
+                    <div id="menu-list-0" class="hide-block">
+                        <a class="btn btn-info btn-sm" onclick="changeDisplayForTwoElements('form-edit-0', 'name-0')">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="#" class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                        <button type="button" class="close"
+                                onclick="taskListHead('open-menu-list-0', 'menu-list-0', 'form-edit-0', 'name-0')"
+                                style="margin: 5px">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <button id="open-menu-list-0" type="button" class="close"
+                            onclick="changeDisplayForTwoElements('menu-list-0', 'open-menu-list-0')">
+                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                    </button>
+                </div>
+            </div>
             <section class="list">
                 <div class="task">Spring Boot.</div>
                 <div class="task">Unit-testing.</div>
@@ -67,7 +100,40 @@
             </div>
         </div>
         <div class="task-list">
-            <h4>Doing</h4>
+            <div class="task-list-head">
+                <div id="name-1">
+                    <h4>Doing</h4>
+                </div>
+                <div id="form-edit-1" class="hide-block">
+                    <form class="form-edit" method="post" modelAttribute="task">
+                        <fieldset>
+                            <input class="edit-title" path="name" placeholder="Edit task-list" type="text"/>
+                        </fieldset>
+                        <button type="submit" class="btn btn-success btn-sm" style="margin: 5px;">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="task-list-menu">
+                    <div id="menu-list-1" class="hide-block">
+                        <a class="btn btn-info btn-sm" onclick="changeDisplayForTwoElements('form-edit-1', 'name-1')">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="#" class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                        <button type="button" class="close"
+                                onclick="taskListHead('open-menu-list-1', 'menu-list-1', 'form-edit-1', 'name-1')"
+                                style="margin: 5px">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <button id="open-menu-list-1" type="button" class="close"
+                            onclick="changeDisplayForTwoElements('menu-list-1', 'open-menu-list-1')">
+                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                    </button>
+                </div>
+            </div>
             <section class="list">
                 <div class="task">HashCode and Equals</div>
                 <div class="task">Collections.</div>
@@ -97,7 +163,40 @@
         </div>
 
         <div class="task-list">
-            <h4>Done</h4>
+            <div class="task-list-head">
+                <div id="name-2">
+                    <h4>Done</h4>
+                </div>
+                <div id="form-edit-2" class="hide-block">
+                    <form class="form-edit" method="post" modelAttribute="task">
+                        <fieldset>
+                            <input class="edit-title" path="name" placeholder="Edit task-list" type="text"/>
+                        </fieldset>
+                        <button type="submit" class="btn btn-success btn-sm" style="margin: 5px;">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="task-list-menu">
+                    <div id="menu-list-2" class="hide-block">
+                        <a class="btn btn-info btn-sm" onclick="changeDisplayForTwoElements('form-edit-2', 'name-2')">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        <a href="#" class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                        <button type="button" class="close"
+                                onclick="taskListHead('open-menu-list-2', 'menu-list-2', 'form-edit-2', 'name-2')"
+                                style="margin: 5px">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <button id="open-menu-list-2" type="button" class="close"
+                            onclick="changeDisplayForTwoElements('menu-list-2', 'open-menu-list-2')">
+                        <span class="glyphicon glyphicon-option-horizontal"></span>
+                    </button>
+                </div>
+            </div>
             <section class="list">
                 <div class="task">Mutable objects.</div>
                 <div class="task">Git.</div>
