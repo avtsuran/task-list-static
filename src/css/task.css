@@ -5,7 +5,7 @@ html, body {
 }
 
 .task {
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 20px;
     display: flex;
     flex-direction: column;

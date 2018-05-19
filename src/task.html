@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="css/task.css" rel="stylesheet">
+    <link href="css/modal-window.css" rel="stylesheet">
     <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -108,7 +109,7 @@
         <div class="actions">
             <p class="title">Actions</p>
             <a type="button" class="btn btn-info action">Edit</a>
-            <a type="button" class="btn btn-danger action">Remove</a>
+            <a type="button" class="btn btn-danger action" onclick="showOrHideElement('modal')">Remove</a>
             <div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle action" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -132,6 +133,17 @@
             </div>
             <a type="button" class="btn btn-success action">Add an attachment</a>
         </div>
+    </div>
+</div>
+
+<div id="modal" class="modal-window">
+    <div class="content">
+        <div class="content-message">
+            <h4 id="remove">Remove the task?</h4>
+            <p>Once you remove a task, there is no going back. Please be certain.</p>
+        </div>
+        <a type="button" id="delete-board-by-id" class="btn btn-danger" href="/delete-task?id=#">Remove</a>
+        <a type="button" class="btn btn-default" onclick="showOrHideElement('modal')">No, thanks.</a>
     </div>
 </div>
 </body>
