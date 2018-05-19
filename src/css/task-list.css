@@ -1,4 +1,4 @@
-html, body{
+html, body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -11,16 +11,16 @@ html, body{
     margin: auto;
 }
 
-.head{
+.head {
     display: flex;
     margin-bottom: 10px;
 }
 
-.main-menu{
+.main-menu {
     display: flex;
 }
 
-.board-name{
+.board-name {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,15 +33,15 @@ html, body{
     border-radius: 3px;
 }
 
-#edit{
+#edit {
     display: none;
 }
 
-.form-edit{
+.form-edit {
     display: flex;
 }
 
-.edit-input{
+.edit-input {
     width: 231px;
     margin-right: 10px;
     padding-left: 5px;
@@ -85,13 +85,13 @@ html, body{
     border-radius: 3px;
 }
 
-.task-list-head{
+.task-list-head {
     height: 40px;
     display: flex;
     justify-content: space-between;
 }
 
-.task-list-menu{
+.task-list-menu {
     display: flex;
     flex-wrap: wrap;
     align-self: center;
@@ -108,6 +108,7 @@ html, body{
 .list::-webkit-scrollbar {
     width: 5px;
 }
+
 .list::-webkit-scrollbar-thumb {
     padding-top: 5px;
     border-radius: 5px;
@@ -122,7 +123,7 @@ html, body{
     margin-bottom: 5px;
     margin-right: 5px;
     border-radius: 3px;
-    border-bottom: 2px #cdcdcd ;
+    border-bottom: 2px #cdcdcd;
     min-height: 55px;
 }
 
@@ -130,19 +131,31 @@ html, body{
     background-color: #edeff0;
 }
 
-.priority-1{
+.task-link {
+    display: block;
+    width: 260px;
+    color: #000000 !important;
+    text-decoration: none !important;
+}
+
+.task-link:hover, .task-link:active {
+    color: #000000 !important;
+    text-decoration: none !important;
+}
+
+.priority-1 {
     background-color: #d9534f;
     width: 5px;
     border-radius: 5px;
 }
 
-.priority-2{
+.priority-2 {
     background-color: #5cb85c;
     width: 5px;
     border-radius: 5px;
 }
 
-.priority-3{
+.priority-3 {
     background-color: #5bc0de;
     width: 5px;
     border-radius: 5px;
@@ -165,7 +178,7 @@ html, body{
     font-size: 15px;
 }
 
-.edit-title{
+.edit-title {
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 5px;
@@ -185,10 +198,10 @@ html, body{
 }
 
 input:focus, input:hover {
-    outline:none;
+    outline: none;
 }
 
-.add-list{
+.add-list {
     display: block;
     margin-right: 10px;
     padding-bottom: 10px;
@@ -199,11 +212,11 @@ input:focus, input:hover {
     border-radius: 3px;
 }
 
-.add-list:hover{
+.add-list:hover {
     background-color: #b7b9bb;
 }
 
-.title-task-list{
+.title-task-list {
     display: block;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -215,10 +228,10 @@ input:focus, input:hover {
     font-size: 15px;
 }
 
-button:focus{
+button:focus {
     outline: none;
 }
 
-.hide-block{
+.hide-block {
     display: none;
 }
