@@ -49,18 +49,36 @@ html, body {
     flex-direction: column;
     background-color: #ffffff;
     width: 280px;
-    padding: 0px 5px 5px 5px;
+    padding: 0px 5px 5px 10px;
     border-radius: 3px;
     margin-right: 10px;
 }
 
+.attachment-list {
+    max-height: 195px;
+    overflow-y: auto;
+}
+
+.attachment-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.attachment-list::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #b4b5b7;
+}
+
 .attachment {
     display: flex;
-    width: 270px;
     height: 60px;
-    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
     background-color: #fce5cd;
     border-radius: 3px;
+}
+
+.attachment:hover {
+    background-color: #e1ccb7;
 }
 
 .label-link {
@@ -83,12 +101,12 @@ html, body {
 .title {
     font-size: 18px;
     color: #333333;
-    margin: 5px 5px 0px 5px;
+    margin: 5px 5px 0px 0px;
 }
 
 .action {
-    width: 145px !important;
+    width: 140px !important;
     height: 34px !important;
-    margin-top: 5px !important;
+    margin-bottom: 5px !important;
     margin-left: 15px !important;
 }
