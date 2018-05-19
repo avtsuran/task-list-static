@@ -30,7 +30,12 @@
         <p>in list To Do</p>
     </div>
     <div class="description">
-        <p class="title">Description</p>
+        <div class="description-head">
+            <p class="title">Description</p>
+            <button type="button" class="close">
+                <span class="glyphicon glyphicon-option-horizontal"></span>
+            </button>
+        </div>
         <p class="text-description">Spring Boot is Spring's convention-over-configuration solution for creating
             stand-alone, production-grade Spring-based Applications that you can "just run".</p>
     </div>
@@ -40,19 +45,63 @@
             <section class="attachment-list">
                 <div class="attachment">
                     <div class="label-link"></div>
-                    <p>HTTP</p>
+                    <div class="attachment-body">
+                        <p>HTTP</p>
+                        <div class="btn-group">
+                            <button type="button" class="close dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-option-vertical"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit</a></li>
+                                <li><a href="#">Remove</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="attachment">
                     <div class="label-link"></div>
-                    <p>Rest API</p>
+                    <div class="attachment-body">
+                        <p>Rest API</p>
+                        <div class="btn-group">
+                            <button type="button" class="close dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-option-vertical"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit</a></li>
+                                <li><a href="#">Remove</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="attachment">
                     <div class="label-link"></div>
-                    <p>Java beans</p>
+                    <div class="attachment-body">
+                        <p>Java beans</p>
+                        <div class="btn-group">
+                            <button type="button" class="close dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-option-vertical"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit</a></li>
+                                <li><a href="#">Remove</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="attachment">
                     <div class="label-link"></div>
-                    <p>Spring IoC</p>
+                    <div class="attachment-body">
+                        <p>Spring IoC</p>
+                        <div class="btn-group">
+                            <button type="button" class="close dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-option-vertical"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Edit</a></li>
+                                <li><a href="#">Remove</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
